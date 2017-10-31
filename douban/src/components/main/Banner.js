@@ -11,9 +11,9 @@ class Banner extends Component {
 			<h2>
 				预约摄影师拍照<br/>记录每一个特别的你
 			</h2>
-			<a href="#" className="order">如何预约拍照?</a>
+			<a href="" className="order">如何预约拍照?</a>
 			<div className="camer">						
-        		© 摄影师: <a href="#">人生海海(北京)</a>
+        		© 摄影师: <a href="">人生海海(北京)</a>
 			</div>
 			</div>
 		)

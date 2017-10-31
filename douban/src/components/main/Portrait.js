@@ -1,11 +1,9 @@
 import React, {Component} from 'react';
 import {connect} from 'react-redux';
 import {
-  BrowserRouter as Router,
   Route,
   Link
-} from 'react-router-dom'
-import Main from '../Main';
+} from 'react-router-dom';
 import Aset from '../Aset';
 import Detail from '../Detail';
 class PortraitUI extends Component {
@@ -24,7 +22,7 @@ class PortraitUI extends Component {
 					</div>
 				</div>
 				<div className="locs">
-					 <Route exact path="/aset" component={Aset}/>
+					<Route exact path="/aset" component={Aset}/>
 					<Link to="/aset">北京</Link>
 				    <Link to="/aset">上海</Link>
 				    <Link to="/aset">广州</Link>
@@ -33,8 +31,13 @@ class PortraitUI extends Component {
 				    <Link to="/aset">全部</Link>
 				</div>
 				<div className="list">
+<<<<<<< HEAD
 				
 				      <Link to="detail/1111" className="first"><img alt="" src="https://qnypy.doubanio.com/201606281158561682__l"/></Link>
+=======
+					  <Route exact path="/detail" component={Detail}/>
+				      <Link to="/detail" className="first"><img alt="" src="https://qnypy.doubanio.com/201606281158561682__l"/></Link>
+>>>>>>> 26efb57622816f8c22288d06c6330484bbc9e337
 				      <Link to="/detail" className="detail_list">
 				          <img alt="" src="https://qnypy.doubanio.com/201612272246553725__l"/>
 				          <div className="title">越夜越美丽</div>
