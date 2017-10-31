@@ -7,6 +7,7 @@ import Slider from './main/Slider';
 import Portrait from './main/Portrait';
 import Feature from './main/Feature';
 import Pger from './main/Pger';
+import Foot from './main/Foot';
 class MainUI extends Component {
 	componentDidMount() {
 		this.props.getData();
@@ -20,6 +21,7 @@ class MainUI extends Component {
 				<Portrait/>
 				<Feature/>
 				<Pger/>
+				<Foot/>
 			</div>
 		)
 	}

@@ -11,9 +11,13 @@
 #head a.logo{
     font-size:0.12rem;
     float:left;
-    margin-left:0.2rem;
-    margin-top:0.1rem;
+    margin-left:0.1rem;
+    margin-top:0.05rem;
     color:#fff;
+}
+#head a.logo img{
+    width:0.34rem;
+    height:0.26rem;
 }
 #head a.login{
     font-size:0.12rem;
@@ -68,20 +72,20 @@
 }
 #slider{
     text-align:center;
-}
-#slider{
-    margin: 0.3rem 0px;
+    margin: 0.2rem 0;
 }
 #slider h3{
-    font-size:0.14rem;
+    font-size:0.18rem;
+    font-weight: 100;
     margin-bottom: 0.2rem;
     letter-spacing: 0.01rem;
+    color:#666;
 }
 #slider .my-carousel{
     margin: 0rem 0rem 0.02rem;
 }
 #slider .my-carousel img{
-    width: 100%;
+    width: 3.2rem;
     height:1rem;
     display:block
 }
@@ -92,13 +96,15 @@
 	position: fixed;
 	bottom:0;
 	font-size:0.14rem;
+    background:#fff;
+    z-index: 200;
 }
 #nav li{
 	display: inline-block;
-		height:0.41rem;
-		text-align:center;
-		padding:0 0.165rem;
-		border-top:1px solid #eee;
+	height:0.41rem;
+	text-align:center;
+	padding:0 0.165rem;
+	border-top:1px solid #eee;
 }
 #nav .cusor{
 	border-top:2px solid #f66;
@@ -283,6 +289,7 @@
 #pger .card .card_info .card_info_avater img{
     width:0.48rem;
     height:0.48rem;
+    border-radius: 50%;
     margin-bottom: 0.05rem;
 }
 #pger .card .card_info .card_info_name{
@@ -322,6 +329,42 @@
     height:2.66rem;
     width:3.2rem;
 }
+
+#foot{
+    margin-top:0.5rem;
+    font-size:0.12rem;
+    text-align: center;
+    margin-bottom: 0.8rem;
+}
+#foot .foot_serve{
+    margin-bottom: 0.1rem;
+}
+#foot .foot_serve img{
+    width:1rem;
+    height:1rem;
+}
+#foot .foot_serve p{
+    color:#b2a5c2
+}
+#foot .foot_copyright p{
+    color:#b2a5c2;
+    line-height:0.24rem;
+}
+#foot .foot_copyright span{
+    color:#3377aa;
+}
+#foot .foot_copyright ul{
+    padding:0 0.2rem;
+}
+#foot .foot_copyright ul li {
+    float:left;
+    padding:0 0.04rem;
+    color: rgb(153, 153, 153);
+}
+#foot .foot_copyright ul li a{
+     color: rgb(51, 119, 170);
+}
+
 
 
 
