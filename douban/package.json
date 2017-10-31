@@ -54,6 +54,7 @@
     "test": "node scripts/test.js --env=jsdom"
   },
   "proxy": {
+    
     "/shopping": {
       "target": "https://restapi.ele.me",
       "changeOrigin": true,

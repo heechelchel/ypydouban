@@ -21,8 +21,15 @@ const mapStateToProps = (state)=>{
 
 const mapDispatchToProps = (dispatch)=>{
 	return {
-		getData: function(){
-		}
+		// getData: function(){
+		// 	axios.get("shopping/restaurants?latitude=38.913689&longitude=121.614761&offset=0&limit=20&extras[]=activities&terminal=h5")
+		// 	.then((res)=>{
+		// 		dispatch({
+		// 			type: "Main_GET_DATA",
+		// 			payload: res.data
+		// 		})
+		// 	})
+		// }
 	}
 }
 
