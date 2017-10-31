@@ -7,7 +7,7 @@ class DetailUI extends Component {
 	render() {
 		return (
 			<div id="detail">
-				详情页
+				{this.props.match.params.id}
 			</div>
 		)
 	}

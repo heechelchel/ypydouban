@@ -23,7 +23,7 @@ const App = () => (
       <Route path="/active" component={Active}/>
       <Route path="/detail" component={Detail}/>
       <Route path="/photographer" component={Photographer}/>
-     
+     <Route  path='/detail/:id' component={Detail}/>
       
       <ul id="nav">
         <li className="cusor"><Link to="/">首页</Link></li>
