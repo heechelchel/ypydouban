@@ -1,5 +1,7 @@
 import React, {Component} from 'react';
 import {connect} from 'react-redux';
+import Head_com from "./Head_com";
+import Nav from "./Nav";
 class PhotographerUI extends Component {
 	componentDidMount() {
 		
@@ -7,7 +9,9 @@ class PhotographerUI extends Component {
 	render() {
 		return (
 			<div id="photographer">
-				摄影师
+				<Head_com/>
+					摄影师
+				<Nav/>
 			</div>
 		)
 	}

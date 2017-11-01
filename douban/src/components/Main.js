@@ -7,15 +7,23 @@ import Slider from './main/Slider';
 import Portrait from './main/Portrait';
 import Feature from './main/Feature';
 import Pger from './main/Pger';
+<<<<<<< HEAD
 
+=======
+import Nav from './Nav';
+>>>>>>> e354dda5569fa438bd3fde3e92d2cc76ea7c8523
 // import {
 //     BrowserRouter as Router,
 //     Link
 // } from 'react-router-dom'
+<<<<<<< HEAD
 
 
 import Foot from './main/Foot';
 
+=======
+import Foot from './main/Foot';
+>>>>>>> e354dda5569fa438bd3fde3e92d2cc76ea7c8523
 class MainUI extends Component {
 	// componentDidMount() {
 	// 	this.props.getData();
@@ -30,6 +38,7 @@ class MainUI extends Component {
 				<Feature/>
 				<Pger/>
 				<Foot/>
+				<Nav/>
 			</div>
 		)
 	}

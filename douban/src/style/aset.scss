@@ -4,7 +4,68 @@
 }
 #aset .aset_list{
 	margin-top:0.8rem;
+	margin-bottom:0.1rem;
 }
-#aset .aset_list select{
-	list-style:none;
+#aset .aset_list .aset_head select{
+	width:0.94rem;
+	height:0.23rem;
+	line-height:0.23rem;
+	border:0.01rem solid #eee;
+	text-align:center;
+	color:#666;
+	padding:0 0.06rem;
+	border-radius:0.05rem
 }
+#aset .aset_list .aset_head div{
+	margin:0.05rem 0.1rem;
+	display:inline-block;
+}
+#aset .aset_list .aset_head div:nth-of-type(1){
+	margin-right:0;
+}
+#aset .aset_list .aset_title{
+	color: rgb(255, 102, 102);
+    text-align: center;
+    font-size:0.18rem;
+    margin-top:0.1rem;
+    margin-bottom:0.3rem;
+}
+#aset .aset_list .aset_count p{
+	padding: 0 0.05rem;
+}
+#aset .aset_list .aset_count li{
+	border:1px solid #eee;
+	width:1.44rem;
+	float:left;
+	margin:0.05rem 0.05rem 0.3rem 0.08rem;
+	padding-bottom:0.2rem;
+}
+#aset .aset_list .aset_count li img{
+	width:1.44rem;
+	height:1.08rem;
+}
+#aset .aset_list .aset_count li .title{
+	font-size:0.12rem;
+	line-height:0.18rem;
+	color:#333;
+	margin-top:0.1rem;
+}
+#aset .aset_list .aset_count li .price{
+	color:#ff6666;
+	line-height:0.18rem;
+}
+#aset .aset_list .aset_count li .price span{
+	color:#ccc;
+	float:right;
+}
+#aset .aset_list .aset_count li .price .iconfont{
+	float:right;
+	font-size:0.12rem;
+	padding-top:0.02rem;
+}
+#aset .aset_list .aset_count li .loc{
+	color:#666;
+	line-height:0.18rem;
+}
+
+

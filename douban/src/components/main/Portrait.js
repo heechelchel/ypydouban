@@ -30,6 +30,7 @@ class PortraitUI extends Component {
 				    <Link to="/aset">武汉</Link>
 				    <Link to="/aset">全部</Link>
 				</div>
+<<<<<<< HEAD
 				<div className="list">
 
 
@@ -41,6 +42,11 @@ class PortraitUI extends Component {
 				          <div className="title">越夜越美丽</div>
 				          <div className="price">￥3480起/套</div>
 				          <div className="loc">厦门，南京，成都，广州，上海，北京</div>
+=======
+				<div className="list">				
+				      <Link to="detail/1478" className="first">
+				      	<img alt="" src="https://qnypy.doubanio.com/201606281158561682__l"/>
+>>>>>>> e354dda5569fa438bd3fde3e92d2cc76ea7c8523
 				      </Link>
 				      <Link to="/detail/1909" className="detail_list">
 				          <img alt="" src="https://qnypy.doubanio.com/201701151804014695__l"/>

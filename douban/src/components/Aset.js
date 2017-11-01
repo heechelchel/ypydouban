@@ -2,6 +2,7 @@ import React, {Component} from 'react';
 import {connect} from 'react-redux';
 import axios from 'axios';
 import Head_com from "./Head_com";
+import Nav from "./Nav";
 import '../style/aset.scss';
 class AsetUI extends Component {
 	componentDidMount() {
@@ -15,6 +16,7 @@ class AsetUI extends Component {
 					<div className="aset_head">
 						<div className="cate">
 							<select>
+								<option>类别</option>
 								<option>写真</option>
 								<option>婚纱</option>
 							</select>
@@ -39,14 +41,19 @@ class AsetUI extends Component {
 						</div>
 					</div>
 					
-					<div className="aset_title">写真套系</div>
+					<div className="aset_title">全部套系</div>
+					<ul className="aset_count">
+						{this.props.list.map((item,index)=>{
+						return  <li key={item.title}>
+								    <img alt="" src={item.cover} />
+								    <p className="title">{item.title}</p>
+								    <p className="price">￥{item.price}<span>{item.num_remain}人想拍</span><i className="iconfont">&#xe63b;</i></p>
+								    <p className="loc">拍摄地：{item.loc}</p>
+							    </li>
+						})}
+					</ul>
 				</div>
-				
-				{this.props.list.map((item, index)=>{
-					return <li key={item.title}>{item.title}
-						<img src={item.pger_pic} />
-					</li>;
-				})}
+				<Nav/>
 			</div>
 		)
 	}

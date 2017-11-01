@@ -91,16 +91,17 @@
     display:block
 }
 #nav{
-	display:block;
-	height:0.41rem;
-	line-height:0.41rem;
-	position: fixed;
-	bottom:0;
-	font-size:0.14rem;
+    display:block;
+    height:0.41rem;
+    line-height:0.41rem;
+    position: fixed;
+    bottom:0;
+    font-size:0.14rem;
     background:#fff;
     z-index: 200;
 }
 #nav li{
+<<<<<<< HEAD
 	display: inline-block;
 	height:0.41rem;
 	border-top:1px solid #eee;
@@ -110,12 +111,24 @@
 }
 #nav li a{
 	color:#888;
+=======
+    display: inline-block;
+    height:0.41rem;
+    border-top:1px solid #eee;
+}
+#nav .active{
+    border-top:2px solid #f66;
+}
+#nav li a{
+    color:#888;
+>>>>>>> e354dda5569fa438bd3fde3e92d2cc76ea7c8523
     display:inline-block;
     width:0.64rem;
     height:0.41rem;
     line-height:0.41rem;
     text-align:center;
 }
+
 
 #portrait h2{
 	height:0.25rem;

@@ -65,8 +65,13 @@ class DetailUI extends Component {
 					<a>登入</a>
 				</div>
 				<div className="banner">
+<<<<<<< HEAD
 					<img src={this.props.list.pic}/>
 					<h1><span>[{this.props.list.spe}]</span>{this.props.list.title}</h1>
+=======
+					<img alt="" src={this.state.pic}/>
+					<h1><span>[{this.state.spe}]</span>{this.state.title}</h1>
+>>>>>>> e354dda5569fa438bd3fde3e92d2cc76ea7c8523
 				</div>
 				<div className="con">
 					<div className="top">

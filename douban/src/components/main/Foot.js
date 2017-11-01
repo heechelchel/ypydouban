@@ -13,7 +13,7 @@ class FootUI extends Component {
 		return (
 			<div id="foot">
 				<div className="foot_serve">
-					<img src="https://img3.doubanio.com/f/ypy/1f6d8a4cb8c89de5d931a3d4e3276a7221c3c0d9/pics/promotion/lion/qr.jpg"/>
+					<img alt="" src="https://img3.doubanio.com/f/ypy/1f6d8a4cb8c89de5d931a3d4e3276a7221c3c0d9/pics/promotion/lion/qr.jpg"/>
 					<p>微信服务号 ypy-douban</p>
 				</div>	
 				<div className="foot_copyright">
