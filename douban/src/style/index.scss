@@ -103,15 +103,18 @@
 #nav li{
 	display: inline-block;
 	height:0.41rem;
-	text-align:center;
-	padding:0 0.165rem;
 	border-top:1px solid #eee;
 }
-#nav .cusor{
+#nav .active{
 	border-top:2px solid #f66;
 }
 #nav li a{
 	color:#888;
+    display:inline-block;
+    width:0.64rem;
+    height:0.41rem;
+    line-height:0.41rem;
+    text-align:center;
 }
 
 #portrait h2{
@@ -365,6 +368,7 @@
 #foot .foot_copyright ul li a{
      color: rgb(51, 119, 170);
 }
+
 
 
 

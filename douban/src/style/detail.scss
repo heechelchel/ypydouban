@@ -48,5 +48,37 @@
         background:#fff;
         box-shadow: 0 0 6px rgba(0, 0, 0, 0.1);
         border: 1px solid #efefef;
+
+        .top{
+            padding: 0.1rem;
+            font-size: 0.11rem;
+            text-align: right;
+            span{
+            display:inlint-block;
+            margin-left:0.05rem
+            }
+        }
+        .center{
+            padding:0.08rem;
+            height:0.56rem;
+        }
+        a{
+            display:block;
+            height:.5rem;
+            line-height:.5rem;
+            text-align:center;
+            font-size:0.18rem;
+            font-weight:900;
+            width:45%;
+            border:1px solid #f66;
+            background-color: #fff5f5;
+            color: #f66;
+
+            span{
+                display:inline-block;
+                font-size:0.14rem;
+                font-weight:normal;
+            }
+        }
     }
 }

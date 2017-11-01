@@ -1,7 +1,9 @@
 import React, {Component} from 'react';
+import { Carousel } from 'antd';
+import 'antd/dist/antd.css';
 
 // import head from '../../style/head.scss'
-import { Carousel} from 'antd-mobile';
+// import { Carousel} from 'antd-mobile';
 class Slider extends Component {
 
 	render() {

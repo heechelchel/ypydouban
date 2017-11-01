@@ -31,41 +31,37 @@ class PortraitUI extends Component {
 				    <Link to="/aset">全部</Link>
 				</div>
 				<div className="list">
-<<<<<<< HEAD
+
 
 				
 				      <Link to="detail/1478" className="first"><img alt="" src="https://qnypy.doubanio.com/201606281158561682__l"/></Link>
-
-=======
 					  <Route exact path="/detail" component={Detail}/>
-				      <Link to="detail/1111" className="first"><img alt="" src="https://qnypy.doubanio.com/201606281158561682__l"/></Link>
->>>>>>> c0bad83b9bd23b13bb0e737c1b2459b63e081587
-				      <Link to="/detail" className="detail_list">
+				      <Link to="/detail/2208" className="detail_list">
 				          <img alt="" src="https://qnypy.doubanio.com/201612272246553725__l"/>
 				          <div className="title">越夜越美丽</div>
 				          <div className="price">￥3480起/套</div>
 				          <div className="loc">厦门，南京，成都，广州，上海，北京</div>
 				      </Link>
-				      <Link to="/detail" className="detail_list">
+				      <Link to="/detail/1909" className="detail_list">
 				          <img alt="" src="https://qnypy.doubanio.com/201701151804014695__l"/>
 				          <div className="title">一百种可能  |  20</div>
 				          <div className="price">￥3480起/套</div>
 				          <div className="loc">
 				          Tokyo,厦门，台北，沈阳，南京，成都，广州，上海</div>
 				      </Link>
-				      <Link to="/detail" className="detail_list">
+				      <Link to="/detail/1447" className="detail_list">
 				          <img alt="" src="https://qnypy.doubanio.com/201611281135447008__l"/>
 				          <div className="title">萌宠照相馆</div>
 				          <div className="price">￥790起/套</div>
 				          <div className="loc">北京</div>
 				      </Link>
-				      <Link to="/detail" className="detail_list">
+				      <Link to="/detail/2168" className="detail_list">
 				          <img alt="" src="https://qnypy.doubanio.com/201612051403116167__l"/>
 				          <div className="title">全家福</div>
 				          <div className="price">￥3750起/套</div>
 				          <div className="loc">昆明，洛阳，福州，长沙，苏州，西安，南京，郑州</div>
 				      </Link>
-				      <Link to="/detail" className="detail_list">
+				      <Link to="/detail/1415" className="detail_list">
 				          <img alt="" src="https://qnypy.doubanio.com/201701031223474755__l"/>
 				          <div className="title">清迈印象</div>
 				          <div className="price">￥1700起/套</div>
