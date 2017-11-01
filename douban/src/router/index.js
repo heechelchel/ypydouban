@@ -12,6 +12,7 @@ import Active from '../components/Active';
 import Detail from '../components/Detail';
 import '../style/base.scss';
 import '../style/index.scss';
+import '../style/detail.scss'
 
 
 const App = () => (
@@ -21,10 +22,10 @@ const App = () => (
       <Route path="/aset" component={Aset}/>
       <Route path="/movie" component={Movie}/>
       <Route path="/active" component={Active}/>
-      <Route path="/detail" component={Detail}/>
-      <Route path="/photographer" component={Photographer}/>
-     <Route  path='/detail/:id' component={Detail}/>
       
+      <Route path="/photographer" component={Photographer}/>
+      <Route  path='/detail/:id' component={Detail}/>
+      <Route exact path="/detail" component={Detail}/>
       <ul id="nav">
         <li className="cusor"><Link to="/">首页</Link></li>
         <li><Link to="/aset">套系</Link></li>
