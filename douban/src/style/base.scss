@@ -2,9 +2,37 @@
 	margin:0;
 	padding:0;
 }
-li,ul,ol{
+li,ul,ol,select{
 	list-style:none;
 }
 a{
 	text-decoration: none;
+}
+
+
+#head_com{
+    text-align:center;
+    position:fixed;
+    top:0;
+    width:3.4rem;
+    z-index: 1000;
+    color:#fff;
+    height:0.41rem;
+    line-height:0.41rem;
+}
+#head_com a.logo{
+    font-size:0.12rem;
+    float:left;
+    margin-left:0.1rem;
+    margin-top:0.1rem;
+}
+#head_com a.logo img{
+    width:0.34rem;
+    height:0.26rem;
+}
+#head_com a.login{
+    font-size:0.12rem;
+    float:right;
+    margin-right:0.4rem;
+    color:#666;
 }
