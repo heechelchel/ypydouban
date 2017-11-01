@@ -65,13 +65,10 @@ class DetailUI extends Component {
 					<a>登入</a>
 				</div>
 				<div className="banner">
-<<<<<<< HEAD
 					<img src={this.props.list.pic}/>
 					<h1><span>[{this.props.list.spe}]</span>{this.props.list.title}</h1>
-=======
-					<img alt="" src={this.state.pic}/>
-					<h1><span>[{this.state.spe}]</span>{this.state.title}</h1>
->>>>>>> e354dda5569fa438bd3fde3e92d2cc76ea7c8523
+					<img alt="" src={this.props.list.pic}/>
+					<h1><span>[{this.props.list.spe}]</span>{this.props.list.title}</h1>
 				</div>
 				<div className="con">
 					<div className="top">
@@ -82,7 +79,7 @@ class DetailUI extends Component {
 					</div>
 					<div className="center">
 						{this.props.list.price.map((item, index)=>{
-							return <a href="#" key="item + index">{Math.floor(item.price)}<span>元</span></a>
+							return <a href="#" key={item.id}>{Math.floor(item.price)}<span>元</span></a>
 						})}
 					</div>
 				</div>
