@@ -26,13 +26,6 @@ const App = () => (
       <Route path="/photographer" component={Photographer}/>
       <Route  path='/detail/:id' component={Detail}/>
       <Route exact path="/detail" component={Detail}/>
-      <ul id="nav">
-        <li className="cusor"><Link to="/">首页</Link></li>
-        <li><Link to="/aset">套系</Link></li>
-        <li><Link to="/photographer">摄影师</Link></li>
-        <li><Link to="/movie">客片</Link></li>
-        <li><Link to="/active">活动</Link></li>
-      </ul>
     </div>
   </Router>
 )

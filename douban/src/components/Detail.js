@@ -30,7 +30,7 @@ class Detail extends Component {
 			<div id="detail">
 				<div className="head"><a>登入</a></div>
 				<div className="banner">
-					<img src={this.state.pic}/>
+					<img alt="" src={this.state.pic}/>
 					<h1><span>[{this.state.spe}]</span>{this.state.title}</h1>
 				</div>
 				<div className="con">

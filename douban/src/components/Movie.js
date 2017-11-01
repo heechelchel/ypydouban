@@ -1,5 +1,7 @@
 import React, {Component} from 'react';
 import {connect} from 'react-redux';
+import Head_com from "./Head_com";
+import Nav from "./Nav";
 class MovieUI extends Component {
 	componentDidMount() {
 		
@@ -7,7 +9,9 @@ class MovieUI extends Component {
 	render() {
 		return (
 			<div id="movie">
-				电影
+				<Head_com/>
+					电影
+				<Nav/>
 			</div>
 		)
 	}

@@ -8,7 +8,6 @@ class ActiveUI extends Component {
 	render() {
 		return (
 			<div id="active">
-				活动
 				<Aset></Aset>
 			</div>
 		)
