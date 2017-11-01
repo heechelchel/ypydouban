@@ -33,10 +33,7 @@ class PortraitUI extends Component {
 				<div className="list">
 
 				
-				      <Link to="detail/1111" className="first"><img alt="" src="https://qnypy.doubanio.com/201606281158561682__l"/></Link>
-
-					  <Route exact path="/detail" component={Detail}/>
-				      <Link to="/detail" className="first"><img alt="" src="https://qnypy.doubanio.com/201606281158561682__l"/></Link>
+				      <Link to="detail/1478" className="first"><img alt="" src="https://qnypy.doubanio.com/201606281158561682__l"/></Link>
 
 				      <Link to="/detail" className="detail_list">
 				          <img alt="" src="https://qnypy.doubanio.com/201612272246553725__l"/>
