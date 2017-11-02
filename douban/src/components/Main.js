@@ -1,6 +1,6 @@
 import React, {Component} from 'react';
 import {connect} from 'react-redux';
-// import axios from 'axios';
+import axios from 'axios';
 import Head from './main/Head';
 import Banner from './main/Banner';
 import Slider from './main/Slider';
@@ -9,11 +9,13 @@ import Feature from './main/Feature';
 import Pger from './main/Pger';
 import Nav from './Nav';
 import Foot from './main/Foot';
+import Photographer from "./Photographer";
+import Aset from "./Aset";
 
 class MainUI extends Component {
-	// componentDidMount() {
-	// 	this.props.getData();
-	// }
+	componentDidMount() {
+		this.props.getAsetData();
+	}
 	render() {
 		return (
 			<div id="main">
@@ -32,21 +34,21 @@ class MainUI extends Component {
 
 const mapStateToProps = (state)=>{
 	return {
-		list: state.list
+		list: state.aset_list
 	}
 }
 
 const mapDispatchToProps = (dispatch)=>{
 	return {
-		// getData: function(){
-		// 	axios.get("shopping/restaurants?latitude=38.913689&longitude=121.614761&offset=0&limit=20&extras[]=activities&terminal=h5")
-		// 	.then((res)=>{
-		// 		dispatch({
-		// 			type: "Main_GET_DATA",
-		// 			payload: res.data
-		// 		})
-		// 	})
-		// }
+		getAsetData:function(){
+			axios.get("/ajax/promotion/info")
+  			.then((res)=>{
+   				 dispatch({
+      					type: "ASET_GET_DATA",
+      					payload: res.data.promotion_config.new_arrival.services
+    			})
+  			})
+  		}
 	}
 }
 

@@ -1,12 +1,13 @@
 import React, {Component} from 'react';
 import {connect} from 'react-redux';
 import axios from 'axios';
+import Foot from "./main/Foot";
 import Head_com from "./Head_com";
 import Nav from "./Nav";
 import '../style/aset.scss';
 class AsetUI extends Component {
 	componentDidMount() {
-		this.props.getAsetData();
+		// this.props.getAsetData();
 	}
 	render() {
 		return (
@@ -53,6 +54,7 @@ class AsetUI extends Component {
 						})}
 					</ul>
 				</div>
+				<Foot/>
 				<Nav/>
 			</div>
 		)
@@ -67,16 +69,15 @@ const mapStateToProps = (state)=>{
 
 const mapDispatchToProps = (dispatch)=>{
 	return {
-		getAsetData: function(){
-			axios.get("/ajax/promotion/info")
-			.then((res)=>{
-				console.log(res);
-				dispatch({
-					type: "ASET_GET_DATA",
-					payload: res.data.promotion_config.new_arrival.services
-				})
-			})
-		}
+		// getAsetData:function(){
+		// 	axios.get("/ajax/promotion/info")
+  // 			.then((res)=>{
+  //  				 dispatch({
+  //     					type: "ASET_GET_DATA",
+  //     					payload: res.data.promotion_config.new_arrival.services
+  //   			})
+  // 			})
+  // 		}
 	}
 }
 

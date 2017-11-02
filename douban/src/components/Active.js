@@ -8,7 +8,7 @@ class ActiveUI extends Component {
 	render() {
 		return (
 			<div id="active">
-				<Aset></Aset>
+				{this.props.list.spe}
 			</div>
 		)
 	}
