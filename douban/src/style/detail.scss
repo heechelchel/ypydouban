@@ -43,7 +43,6 @@
     }
     .con{
         width:3rem;
-        height:5.87rem;
         margin:-0.6rem 0.1rem 0;
         background:#fff;
         box-shadow: 0 0 6px rgba(0, 0, 0, 0.1);
@@ -83,11 +82,9 @@
             }
         }
         .bottom{
-            margin-bottom: 0.15rem;
             ul{
                 height:1.4rem;
-                
-
+                padding-left: 0.2rem;
                 li{
                     display:inline-block;
                     width:.85rem;
@@ -104,13 +101,114 @@
 
                         span{
                             font-size: 0.1rem;
-                            font-style: normal;                        
+                            font-style: normal;    
+                            margin-left:0.05rem;                    
                         }
                     }
                     .bottom-b{
-                    font-size:0.12rem
+                    font-size:0.1rem
                     }
                 }
+            }
+        }
+        .location{
+            padding-left:0.2rem;
+
+            div{
+                display:inline-block;
+                margin-right: 0.1rem;
+                margin-top: 0.05rem;
+                font-size:0.12rem;
+                float: left;
+            }
+            ul{
+                display:inline-block;
+                width: 2rem;
+                li{
+                display:inline-block;
+                float:left
+                }
+                    a{
+                        display: inline-block;
+                        padding: 0.02rem 0.05rem;
+                        margin: 0 05rem 05rem 05rem;
+                        border: 0.01rem solid #ddd;
+                        border-radius: 0.02rem;
+                        background: #fff;
+                        text-align: center;
+                        vertical-align: middle;
+                        margin: 0 0.05rem 0.05rem 0;
+                        color:#333;
+                        font-size:0.13rem
+                    }
+                    a:hover{
+                        border:1px solid #f66;
+                        background-color: #fff5f5;
+                        color: #f66;                    
+                    }
+            }
+        }
+        .diaries{
+            padding-left:0.2rem;
+            margin-bottom: 0.1rem;
+            span{
+                display:inline-block;
+                margin-right:0.1rem
+            }
+            a{
+                display: inline-block;
+                padding: 0.02rem 0.05rem;
+                border: 0.01rem solid #ddd;
+                border-radius: 0.02rem;
+                background: #fff;
+                text-align: center;
+                vertical-align: middle;
+                margin: 0 0.05rem 0.05rem 0;
+                color:#333;
+                font-size:0.13rem
+            }
+            a:hover{
+                border:1px solid #f66;
+                background-color: #fff5f5;
+                color: #f66;
+            }
+        }
+        .order{
+            padding: 0.01rem 0 0.2rem;
+            text-align: center;
+            font-size: 0.12rem;
+            color: #999;
+            span{
+                display: inline-block;
+                background-color: #eee;
+                font-size: 0.16rem;
+                padding-left: 0.2rem;
+                padding-right: 0.2rem;
+                padding-top: 0.1rem;
+                padding-bottom: 0.1rem;
+            }
+        }
+    }
+    .main{
+        margin-left:0.1rem;
+        margin-right:0.1rem;
+        margin-top:0.3rem;
+        .hd{
+            border-bottom:0.01rem solid #ccc;
+            h2{
+                display: inline-block;
+                padding: 0.15rem 0.15rem 0.15rem;
+                margin-bottom: -0.01rem;
+                border: none;
+                font-size: 0.21rem;
+                border-bottom: 0.01rem solid #f66;
+                color: #f66;
+            }
+        }
+        .bd{
+            margin-top:0.2rem;
+            img{
+            width:100%
             }
         }
     }

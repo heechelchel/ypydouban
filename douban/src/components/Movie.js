@@ -2,6 +2,11 @@ import React, {Component} from 'react';
 import {connect} from 'react-redux';
 import Head_com from "./Head_com";
 import Nav from "./Nav";
+import {
+  BrowserRouter as Router,
+  Route,
+  Link
+} from 'react-router-dom';
 class MovieUI extends Component {
 	componentDidMount() {
 		
@@ -10,7 +15,13 @@ class MovieUI extends Component {
 		return (
 			<div id="movie">
 				<Head_com/>
-					电影
+					<div className="list">
+						
+					</div>
+					<div className="title">
+						婚纱.旅拍客片
+					</div>
+
 				<Nav/>
 			</div>
 		)

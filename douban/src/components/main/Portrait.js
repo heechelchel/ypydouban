@@ -80,7 +80,7 @@ class PortraitUI extends Component {
 				</div>
 				<div className="locs">
 					 <Route exact path="/aset" component={Aset}/>
-					<Link to="/aset">北京</Link>
+					<Link to="/aset/">北京</Link>
 				    <Link to="/aset">上海</Link>
 				    <Link to="/aset">广州</Link>
 				    <Link to="/aset">成都</Link>
@@ -89,8 +89,8 @@ class PortraitUI extends Component {
 				</div>
 				<div className="list">
 					  <Route exact path="/detail" component={Detail}/>
-				      <Link to="/detail" className="first"><img alt="" src="https://qnypy.doubanio.com/201612071124478858__l"/></Link>
-				      <Link to="/detail" className="detail_list">
+				      <Link to="/detail/2552" className="first"><img alt="" src="https://qnypy.doubanio.com/201612071124478858__l"/></Link>
+				      <Link to="/detail/2548" className="detail_list">
 				          <img alt="" src="https://qnypy.doubanio.com/201611081230072939__l"/>
 				          <div className="title">青岛|遇见一个温暖的你</div>
 				          <div className="price">￥7800起/套</div>

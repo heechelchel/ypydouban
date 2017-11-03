@@ -11,6 +11,7 @@ import Nav from './Nav';
 import Foot from './main/Foot';
 import Photographer from "./Photographer";
 import Aset from "./Aset";
+import Movie from "./Movie";
 
 class MainUI extends Component {
 	componentDidMount() {

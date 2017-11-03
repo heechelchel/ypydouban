@@ -1,6 +1,9 @@
 import React, {Component} from 'react';
 import {connect} from 'react-redux';
 import axios from 'axios';
+import Foot from './main/Foot'
+import Head from './main/Head'
+import { BackTop } from 'antd';
 class Detail extends Component {
 	constructor(){
 		super();
@@ -14,28 +17,30 @@ class Detail extends Component {
 			rep:"",
 			dan:"",
 			price:[],
-			fprice:""
+			fprice:"",
+			location:[],
+			tt:[]
 		}
 	}
   select(index){
-  	console.log(this.state.price[index].id)
     this.setState({
-      fprice:this.state.price[index].origin_photo_n
+      fprice:this.state.price[index]
     })
   } 
 	componentDidMount (){
 		var that = this
 		axios.get(`/ajax/graphql?query=%0A++++%7B%0A++++++photographer(id%3A+%222087%22)+%7B%0A++++++++uid%2C%0A++++++++name%2C%0A++++++++good_rate%2C%0A++++++++finished_order_num%2C%0A++++++++available_time(show_unavailable%3Atrue%2C+show_expired%3Afalse)+%7B%0A++++++++++id%2C%0A++++++++++loc_id%2C%0A++++++++++loc_name%2C%0A++++++++++order_id%2C%0A++++++++++start_time%2C%0A++++++++++end_time%2C%0A++++++++%7D%0A++++++%7D%0A++++++package(id%3A+${this.props.match.params.id})+%7B%0A++++++++id%2C%0A++++++++title%2C%0A++++++++type_text%2C%0A++++++++collected_num%2C%0A++++++++services+%7B%0A++++++++++id%2C%0A++++++++++price%2C%0A++++++++++prepay%2C%0A++++++++++origin_photo_n%2C%0A++++++++++final_photo_n%2C%0A++++++++++duration%2C%0A++++++++++suit_num%2C%0A++++++++++has_makeup%2C%0A++++++++++pger_suit_num%2C%0A++++++++%7D%2C%0A++++++++config%2C%0A++++++++locations+%7B%0A++++++++++loc_id%2C%0A++++++++++loc_name%2C%0A++++++++%7D%2C%0A++++++%7D%0A++++%7D%0A++`)
 		.then(function(res){
-			// console.log(res.data.package.services[0].id)
 			that.state.title = res.data.package.title
-			that.state.pic = JSON.parse(res.data.package.config).contents.cover.photo.url
+			that.state.picc = JSON.parse(res.data.package.config).contents.cover.photo.url
 			that.state.spe = res.data.package.type_text
 			that.state.author = res.data.photographer.name
 			that.state.rep = Math.floor((res.data.photographer.good_rate)*100)
 			that.state.dan = res.data.photographer.finished_order_num
 			that.state.price = res.data.package.services
-			that.state.fprice = res.data.package.services[0].origin_photo_n
+			that.state.fprice = res.data.package.services[0]
+			that.state.location = res.data.package.locations
+			that.state.tt = JSON.parse(res.data.package.config).contents.service_pics
 			that.setState({
 					
 				})
@@ -45,9 +50,9 @@ class Detail extends Component {
 	render() {
 		return (
 			<div id="detail">
-				<div className="head"><a>登入</a></div>
+				<Head/>
 				<div className="banner">
-					<img src={this.state.pic}/>
+					<img src={this.state.picc}/>
 					<h1><span>[{this.state.spe}]</span>{this.state.title}</h1>
 				</div>
 				<div className="con">
@@ -64,10 +69,54 @@ class Detail extends Component {
  					</div>
 					<div className="bottom">
  						<ul>
- 							<li>{this.state.fprice}</li>
+ 							<li>
+ 								<div className="bottom-t">{this.state.fprice.origin_photo_n}<span>张</span></div>
+ 								<div className="bottom-b">原片放送</div>
+ 							</li>
+ 							<li>
+ 								<div className="bottom-t">{this.state.fprice.final_photo_n}<span>张</span></div>
+ 								<div className="bottom-b">精修</div>
+ 							</li>
+ 							<li>
+ 								<div className="bottom-t">{this.state.fprice.duration}<span>小时</span></div>
+ 								<div className="bottom-b">服务时长</div>
+ 							</li>
+ 							<li>
+ 								<div className="bottom-t">{this.state.fprice.suit_num}<span>组</span></div>
+ 								<div className="bottom-b">拍摄</div>
+ 							</li>
  						</ul>
  					</div>
+ 					<div className="location">
+ 						<div>选择拍摄地:</div>
+ 						<ul>
+ 							{this.state.location.map((item,index)=>{
+ 								return <li key={item.loc_id}><a>{item.loc_name}</a></li>
+ 							})}
+ 						</ul>
+ 					</div>
+ 					<div className="diaries">
+ 						<span>最近档期情况:</span><a>其他</a>
+ 					</div>
+ 					<div className="order"><span>暂停预约</span></div>
 				</div>
+				<div className="main">
+					<div className="hd">
+						<h2>客片欣赏</h2>
+					</div>
+ 					<div className="bd">
+ 						{this.state.tt.map((item, index)=>{
+ 							return <li key={item.photo.id}><img src={item.photo.url}/></li>
+ 						})}
+ 					</div>
+				</div>
+				<Foot/>
+  <div>
+    <BackTop />
+    Scroll down to see the bottom-right
+    <strong style={{ color: 'rgba(64, 64, 64, 0.6)' }}> gray </strong>
+    button.
+  </div>
 			</div>
 		)
 	}
