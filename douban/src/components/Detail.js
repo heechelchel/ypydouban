@@ -26,7 +26,10 @@ class Detail extends Component {
     this.setState({
       fprice:this.state.price[index]
     })
-  } 
+  }
+  add(){
+  	alert(1)
+  }
 	componentDidMount (){
 		var that = this
 		axios.get(`/ajax/graphql?query=%0A++++%7B%0A++++++photographer(id%3A+%222087%22)+%7B%0A++++++++uid%2C%0A++++++++name%2C%0A++++++++good_rate%2C%0A++++++++finished_order_num%2C%0A++++++++available_time(show_unavailable%3Atrue%2C+show_expired%3Afalse)+%7B%0A++++++++++id%2C%0A++++++++++loc_id%2C%0A++++++++++loc_name%2C%0A++++++++++order_id%2C%0A++++++++++start_time%2C%0A++++++++++end_time%2C%0A++++++++%7D%0A++++++%7D%0A++++++package(id%3A+${this.props.match.params.id})+%7B%0A++++++++id%2C%0A++++++++title%2C%0A++++++++type_text%2C%0A++++++++collected_num%2C%0A++++++++services+%7B%0A++++++++++id%2C%0A++++++++++price%2C%0A++++++++++prepay%2C%0A++++++++++origin_photo_n%2C%0A++++++++++final_photo_n%2C%0A++++++++++duration%2C%0A++++++++++suit_num%2C%0A++++++++++has_makeup%2C%0A++++++++++pger_suit_num%2C%0A++++++++%7D%2C%0A++++++++config%2C%0A++++++++locations+%7B%0A++++++++++loc_id%2C%0A++++++++++loc_name%2C%0A++++++++%7D%2C%0A++++++%7D%0A++++%7D%0A++`)
@@ -40,7 +43,7 @@ class Detail extends Component {
 			that.state.price = res.data.package.services
 			that.state.fprice = res.data.package.services[0]
 			that.state.location = res.data.package.locations
-			that.state.tt = JSON.parse(res.data.package.config).contents.service_pics
+			that.state.tt = JSON.parse(res.data.package.config).contents.service_pics.slice(0,5)
 			that.setState({
 					
 				})
@@ -106,8 +109,9 @@ class Detail extends Component {
 					</div>
  					<div className="bd">
  						{this.state.tt.map((item, index)=>{
- 							return <li key={item.photo.id}><img src={item.photo.url}/></li>
+ 								return <li key={item.photo.id}><img src={item.photo.url}/></li>
  						})}
+ 						<button onClick={this.add}>添加</button>
  					</div>
 				</div>
 				<Foot/>

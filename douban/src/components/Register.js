@@ -17,7 +17,7 @@ class RegisterUI extends Component {
             uid : this.refs.name.value,
             password : this.refs.password.value
           };        
-       axios.post('/api/zxw/register', params)
+        axios.post('/api/zxw/register', params)
         .then(function (response) {
           if(response.data){
             alert(1)

@@ -66,7 +66,7 @@ router.post("/zxw/login",(req,res) =>{
 
           //模糊
           // req.session.zxw = result[0];
-          // res.cookie("zhengxuwen",result[0].uid)
+          res.cookie("username",escape(result[0].uid))
           res.send(true)
         }else{
           res.send(false)
